@@ -1,22 +1,22 @@
-# E-Commerce Website
+# 🛒 E-Commerce Website
 
-## Description
+## 📝 Description
 An E-Commerce website crafted with Blazor WebAssembly in .NET 7. It harnesses Blazor's capabilities to deliver a dynamic, interactive user experience without the need for JavaScript. Built on .NET 7, it ensures optimal performance and developer efficiency, empowering .NET developers to create modern web applications entirely in C#.
 
-## Features
-- Product Catalog
-- Product Details
-- Shopping Cart
-- User Authentication
-- Order Management
-- Payment Integration: pay online using [Stripe](https://stripe.com/)
-- Search and Filtering
-- Responsive Design
-- Admin Dashboard
-- Performance Optimization
-- Progressive Web App (PWA)
+## ✨ Features
+- 📦 Product Catalog
+- 🛍️ Product Details
+- 🛒 Shopping Cart
+- 🔒 User Authentication
+- 📦 Order Management
+- 💳 Payment Integration: pay online using [Stripe](https://stripe.com/)
+- 🔍 Search and Filtering
+- 📱 Responsive Design
+- 📊 Admin Dashboard
+- ⚡ Performance Optimization
+- 📱 Progressive Web App (PWA)
 
-## Technologies Used
+## 🛠️ Technologies Used
 - **.NET 7**
 ### Frontend
 - Blazor WebAssembly
@@ -43,12 +43,12 @@ An E-Commerce website crafted with Blazor WebAssembly in .NET 7. It harnesses Bl
 - Visual Studio 2022
 - Git
 
-## Installation
+## 🚀 Installation
 1. Clone the repository: `git clone https://github.com/ninhdan/BlazorEcommercee.git`
 2. Navigate to the project directory: `cd BlazorEcommercee`
 3. Build the application: `dotnet build`
 4. Navigate to server directory: `cd Server`
 5. Run the application: `dotnet watch run`
 
-## Acknowledgements
+## 🙏 Acknowledgements
 We would like to thank the Blazor community and Microsoft for their continuous support and contributions to the Blazor framework. Special thanks to contributors for their valuable input and feedback.

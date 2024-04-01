@@ -1,4 +1,13 @@
 # E-Commerce Website
 ### Description
-This project is an E-Commerce website built using Blazor WebAssembly in .NET 7. It leverages the power of Blazor to create a dynamic and interactive user interface while utilizing .NET 7 features for enhanced performance and developer productivity. With Blazor WebAssembly, developers can build modern web applications entirely in C# without relying on JavaScript, offering a seamless development experience for .NET developers.
+An E-Commerce website crafted with Blazor WebAssembly in .NET 7. It harnesses Blazor's capabilities to deliver a dynamic, interactive user experience without the need for JavaScript. Built on .NET 7, it ensures optimal performance and developer efficiency, empowering .NET developers to create modern web applications entirely in C#.
+### Installation
+1. Clone the repository: git clone https://github.com/ninhdan/BlazorWebAssemblyProject.git
+2. Navigate to the project directory: cd BlazorWebAssemblyProject
+3. Build the application: dotnet build
+4. Run the application: dotnet run
+5. Access the application in your web browser at https://localhost:5001
+
+
+
 

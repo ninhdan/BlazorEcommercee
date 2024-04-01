@@ -36,6 +36,10 @@ An E-Commerce website crafted with Blazor WebAssembly in .NET 7. It harnesses Bl
 - Dependency Injection
 - Repository Pattern
 
+### Design Patterns
+- Dependency Injection
+- Repository Pattern 
+
 ### Database
 - SQL Server 
 

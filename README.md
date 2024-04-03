@@ -23,8 +23,6 @@ An E-Commerce website crafted with Blazor WebAssembly in .NET 7. It harnesses Bl
 - LocalStorage
 - Authorization
 - MudBlazor
-- Dependency Injection
-- Repository Pattern
 
 ### Backend
 - ASP.NET Core Web API (RESTful API)
@@ -33,8 +31,6 @@ An E-Commerce website crafted with Blazor WebAssembly in .NET 7. It harnesses Bl
 - Code-First Migrations
 - SwaggerUI
 - Stripe.net
-- Dependency Injection
-- Repository Pattern
 
 ### Design Patterns
 - Dependency Injection

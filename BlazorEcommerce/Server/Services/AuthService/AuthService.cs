@@ -66,11 +66,13 @@ namespace BlazorEcommerce.Server.Services.AuthService
 
         public async Task<bool> UserExists(string email)
         {
-            if(await _context.Users.AnyAsync(user =>  email.ToLower().Equals(email.ToLower())))
-            {
-                return true;
-            }
-            return false;
+            var lowerCaseEmail = email.ToLower();
+            return await _context.Users.AnyAsync(user => user.Email.ToLower() == lowerCaseEmail);
+            //if (await _context.Users.AnyAsync(user =>  email.ToLower().Equals(email.ToLower())))
+            //{
+            //    return true;
+            //}
+            //return false;
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt) 

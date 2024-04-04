@@ -8,6 +8,7 @@ namespace BlazorEcommerce.Server.Controllers
     public class OrderController : ControllerBase
     {
         private readonly IOrderService _orderService;
+
         public OrderController(IOrderService orderService)
         {
             _orderService = orderService;
@@ -21,7 +22,7 @@ namespace BlazorEcommerce.Server.Controllers
         }
 
         [HttpGet("{orderId}")]
-        public async Task<ActionResult<ServiceResponse<OrderDetailsResponse>>> GetOrderDetails(int orderId)
+        public async Task<ActionResult<ServiceResponse<OrderDetailsResponse>>> GetOrdersDetails(int orderId)
         {
             var result = await _orderService.GetOrderDetails(orderId);
             return Ok(result);

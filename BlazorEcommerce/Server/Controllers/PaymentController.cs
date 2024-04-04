@@ -10,7 +10,7 @@ namespace BlazorEcommerce.Server.Controllers
     {
         private readonly IPaymentService _paymentService;
 
-        public PaymentController(IPaymentService paymentService) 
+        public PaymentController(IPaymentService paymentService)
         {
             _paymentService = paymentService;
         }
@@ -26,9 +26,11 @@ namespace BlazorEcommerce.Server.Controllers
         public async Task<ActionResult<ServiceResponse<bool>>> FulfillOrder()
         {
             var response = await _paymentService.FulfillOrder(Request);
-            if(!response.Success)
+            if (!response.Success)
                 return BadRequest(response.Message);
+
             return Ok(response);
         }
     }
 }
+

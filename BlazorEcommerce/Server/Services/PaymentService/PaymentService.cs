@@ -1,4 +1,5 @@
-﻿using Stripe;
+﻿using Azure.Core;
+using Stripe;
 using Stripe.Checkout;
 
 namespace BlazorEcommerce.Server.Services.PaymentService
@@ -54,13 +55,51 @@ namespace BlazorEcommerce.Server.Services.PaymentService
                 },
                 LineItems = lineItems,
                 Mode = "payment",
-                SuccessUrl = "https://localhost:7008/order-success",
-                CancelUrl = "https://localhost:7008/cart"
+                //SuccessUrl =  "https://localhost:7008/order-success",
+                //CancelUrl = "https://localhost:7008/cart",
+                SuccessUrl = GetSuccessUrl(),
+                CancelUrl = GetCancelUrl()
             };
 
             var service = new SessionService();
             Session session = service.Create(options);
             return session;
+        }
+
+        private string GetSuccessUrl()
+        {
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            string baseUrl;
+
+            // Xác định URL dựa trên môi trường
+            if (environment == "Development")
+            {
+                baseUrl = "https://localhost:7008";
+            }
+            else
+            {
+                baseUrl = "https://ecommerce-donet.azurewebsites.net";
+            }
+
+            return $"{baseUrl}/order-success";
+        }
+
+        private string GetCancelUrl()
+        {
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            string baseUrl;
+
+            // Xác định URL dựa trên môi trường
+            if (environment == "Development")
+            {
+                baseUrl = "https://localhost:7008";
+            }
+            else
+            {
+                baseUrl = "https://ecommerce-donet.azurewebsites.net";
+            }
+
+            return $"{baseUrl}/cart";
         }
 
         public async Task<ServiceResponse<bool>> FulfillOrder(HttpRequest request)

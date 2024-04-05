@@ -27,7 +27,7 @@ An E-Commerce website crafted with Blazor WebAssembly in .NET 7. It harnesses Bl
 ### Backend
 - ASP.NET Core Web API (RESTful API)
 - Entity Framework Core 7
-- JSON Web Tokens (JWT)
+- JwtBearer
 - Code-First Migrations
 - SwaggerUI
 - Stripe.net
